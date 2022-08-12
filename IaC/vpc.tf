@@ -53,6 +53,15 @@ tags = {
 
 resource "aws_subnet" "Data_subnet_1" {
   vpc_id                  = aws_vpc.VPC_wordpress.id
+  cidr_block              = "10.0.101.0/24" 
+  availability_zone       = "us-west-2" 
+tags = {
+   Name = "Data subnet 1"
+}
+}
+
+resource "aws_subnet" "Data_subnet_1" {
+  vpc_id                  = aws_vpc.VPC_wordpress.id
   cidr_block              = "10.0.101.0/22" 
   availability_zone       = "us-west-2" 
 tags = {
